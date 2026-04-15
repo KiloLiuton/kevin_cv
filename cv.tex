@@ -1,61 +1,129 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[10pt,a4paper]{article}
 
-\usepackage[a4paper, total={18cm, 26cm}]{geometry}
-\usepackage{currvita}
-\newcommand*{\ac}[1]{\mbox{#1}}
-\tolerance=600
+% Configurações de idioma e fonte
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+% Desabilita a numeração de páginas
+\pagestyle{empty}
+
+% Formatação personalizada de seções
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries\uppercase}{}{0pt}{}[\titlerule]
+\titlespacing{\section}{0pt}{12pt}{8pt}
 
 \begin{document}
-\begin{cv}{Liu Rodrigues, Kevin}
-\noindent\rule{\linewidth}{0.4pt}
-    \begin{cvlist}{Personal data}
-        \item \textit{Phone}:~+55 19 99732 6791
-        \item \textit{E"~Mail}:~kkevin.liu@gmail.com
-        \item \textit{Birth date}:~09/05/1990
-  
-        \item \textbf{Portuguese}:~Mother tongue
-        \item \textbf{English}:~Fluent (written \& spoken)
-    \end{cvlist}
 
-  \begin{cvlist}{Experiences}
-  \item[2022--Present] Data scientist at Space Time Labs
-  \item[2021--2022] Data scientist at Rappi Brasil Ltda
-  \item[2016--2020] Ph.D. in Statistical and Computational Physics
-  \item[2018-2019] Exchange program for Ph.D. students at the University of Michigan.
-  \item[2017--2019] Data scientist at Olivia Ai Inc., San Francisco
-  \item[2015--2016] Project Engineer at Hewlett Packard funded lab at University of Minas Gerais
-  \item[2010--2012] Scientific Initiation
-  \item[2012--2014] Voluntary Math Teacher
-  \end{cvlist}
+% Cabeçalho
+\begin{center}
+    {\LARGE \textbf{Kevin Liu Rodrigues}}  \\
+    \vspace{2pt}
+    Brasília, DF, Brazil $|$ +55 19 99732 6791  $|$ \href{mailto:kkevin.liu@gmail.com}{kkevin.liu@gmail.com} $|$
+	\href{http://hdl.handle.net/1843/39095}{http://hdl.handle.net/1843/39095}
+\end{center}
 
-  \begin{cvlist}{Education}
-    \item[2016--2021] Ph. D. in Statistical and Computational Physics\\
-        Federal University of Minas Gerais and University of Michigan
-    \item[2012--2015] MSc in Experimental Solid State Physics\\
-        State University of Campinas\\
-    \item[2008--2012] BSc in Physics\\
-        State University of Campinas
-    \item[Extra disciplines] Federal University of Minas Gerais:\\
-        Artificial Intelligence, Phase Transitions, Statistical Physics, Neuroscience
-    \item[] Coursera:\\
-        Introduction to Machine Learning, Using Python to Access Web Data, Bayesian statistics
-  \end{cvlist}
+% Resumo
+\noindent\rule{\textwidth}{0.4pt} I am a scientist with a PhD in computational and statistical physics and solid
+quantitative basis. I first started programming in Tcl/Tk during my masters degree for interfacing with various
+electronic equipments and soon moved to Python, which I have been using ever since.
 
-  \begin{cvlist}{Skills}
-  \item[] Physics, Math, C, C++, Python, Git
-  \end{cvlist}
+Inspired by advances in artificial intelligence in the form of AlphaGo, in my PhD I moved to statistical and
+computational physics, implementing various dynamical systems simulations in C, leading me to a collaboration with the
+University of Michigan, where I was able to give a mathematical description for some systems of oscillators which
+corroborated simulation results.
 
-  \begin{cvlist}{Publications}
-  \item[] Rodrigues, Kevin Liu, and Ronald Dickman. ``Synchronization of discrete oscillators on ring lattices and small-world networks." Journal of Statistical Mechanics 2020.4 (2020): 043406.
-  \end{cvlist}
+This led me to a diverse experience in data science, machine learning and software development: In 2018 I joined Olivia
+AI to develop sentiment analysis and a chatbot before the advent of LLM's. By 2020 I was hired at Rappi to develop life
+time value models and user metrics to aid in the company's expansion in South America, and finally in 2021 I joined
+Spacetime Labs (now Moray AI) to work with machine learning for precision agriculture and crop management
+through climate and sensor data.
 
-  \begin{cvlist}{Events}
-  \item[08/2019] StatPhys27 Buenos Aires
-  \item[07/2017] Fundamental Problems in Statistical Physics, Summer School in Bruneck, Italy.
-  \item[2013/2014] 36th and 37th National Encounter for Condensed Matter Physics 
-  \item[2011/2012] Physics Summer Schools at University of São Paulo and Recife
-  \end{cvlist}
 
-\end{cv}
+% Experiência
+\section{Experience}
+
+\textbf{Moray} (2021 -- Present)
+
+\textit{Data Scientist and Engineer} 
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Machine learning and predictive models for precision agriculture and crop management.
+    \item Data pipelines for gathering and processing spatio-temporal data from sources such as NASA, Copernicus, ECMWF, etc.
+	\item Time series analysis and forecast.
+    \item Machine learning pipelines from training to deployment using mainly MLflow and AWS.
+\end{itemize}
+
+\vspace{6pt}
+
+\textbf{Rappi} (2020 -- 2021)
+
+\textit{Data Scientist} 
+\begin{itemize}[noitemsep, topsep=0pt]
+	\item Development of user life-time value models and user metrics.
+	\item Large dataset processing and visualizations including spatio-temporal maps and dashboards.
+\end{itemize}
+
+\vspace{6pt}
+
+\textbf{Olivia AI} (2018 -- 2018)
+
+\textit{Data Scientist} 
+\begin{itemize}[noitemsep, topsep=0pt]
+	\item Development of a chatbot in the very early stages of AI, experimenting with sentiment analysis, string distance metrics and word embeddings.
+	\item Classification models for text, including Neural Networks, SVM's and ensemble methods.
+\end{itemize}
+
+\vspace{6pt}
+
+\textbf{Federal University of Minas Gerais} (2015 -- 2016)
+
+\textit{Researcher and Engineer} 
+\begin{itemize}[noitemsep, topsep=0pt]
+	\item Development of a high power near-field microscope for Hewlett-Packard (HP) under coordination of professor Gilberto Medeiros
+\end{itemize}
+
+\vspace{6pt}
+
+\textbf{University of Campinas} (2010 -- 2012)
+
+\textit{Scientific initiation} 
+\begin{itemize}[noitemsep, topsep=0pt]
+	\item Development of pico Faraday detection electronics for capacitive sensing.
+	\item Development of electrostatic lensing for ion beam sampling and focusing.
+\end{itemize}
+
+\vspace{6pt}
+
+\textbf{TRIU} (2012 -- 2014)
+
+\textit{Volunteer math teacher} 
+\begin{itemize}[noitemsep, topsep=0pt]
+	\item Math classes for low income students aiming to join top universities.
+\end{itemize}
+
+% Educação
+\section{Education}
+
+\textbf{Doctorate in statistical physics | UFMG} and \textbf{UMICH} (2016 -- 2021)
+
+(Advisors: Ronald Dickman and Kevin Wood)
+
+\vspace{4pt}
+
+\textbf{Master of science in applied physics | University of Campinas} (2012 -- 2015)
+
+\vspace{2pt}
+
+\textbf{Bachelor of science in physics | University of Campinas} (2008 -- 2012)
+
+% Competências
+\section{Skills}
+\begin{itemize}[label={}, leftmargin=0pt, noitemsep]
+	\item \textbf{Programming languages:} Python, SQL, C, C++, TCL/TK, JavaScript
+	\item \textbf{Tools:} MLflow, Docker, Amazon Web Services (AWS), Airflow, Kubernettes, Parametric Modelling (CAD)
+    \item \textbf{Languages:} Portuguese (native), English (fluent spoken/written) 
+\end{itemize}
+
 \end{document}
-\endinput
